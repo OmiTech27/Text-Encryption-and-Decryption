@@ -1,0 +1,181 @@
+<!-- text_encryptor/templates/text_encryptor/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Encryption and Decryption</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+        color: #495057;
+        padding: 20px;
+      }
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-container,
+      .history-container {
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #dee2e6;
+        background-color: #f8f9fa;
+      }
+      .divider {
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5 mb-4 text-center">Text Encryption and Decryption</h1>
+
+      <div class="row">
+        <!-- Encryption Area -->
+        <div class="col-md-6">
+          <div class="form-container">
+            <form method="post" action="{% url 'encrypt' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="text" class="form-label"
+                  >Text for Encryption:</label
+                >
+                <input type="text" name="text" class="form-control" required />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateTextArea('encryption')"
+              >
+                Encrypt
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="clearHistory('encryption')"
+              >
+                Clear History
+              </button>
+            </form>
+          </div>
+
+          <!-- Encrypted Texts Area -->
+          <div class="history-container">
+            <h2 class="mb-3">Encrypted Texts</h2>
+            <ul id="encryption-texts">
+              {% for item in texts %}
+              <li>Encrypted: {{ item.encrypted_text }}<br /></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="col-md-1 divider"></div>
+
+        <!-- Decryption Area -->
+        <div class="col-md-5">
+          <div class="form-container">
+            <form method="post" action="{% url 'decrypt' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="decrypt_text" class="form-label"
+                  >Encrypted Text for Decryption:</label
+                >
+                <input type="text" name="text" class="form-control" required />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-success"
+                onclick="updateTextArea('decryption')"
+              >
+                Decrypt
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="clearHistory('decryption')"
+              >
+                Clear History
+              </button>
+            </form>
+          </div>
+
+          <!-- Decrypted Texts Area -->
+          <div class="history-container">
+            <h2 class="mb-3">Decrypted Texts</h2>
+            <ul id="decryption-texts">
+              {% for item in texts %}
+              <li>
+                Decrypted: {{ item.text }}<br />
+                Encrypt: {{ item.decrypted_text }}<br />
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (required for some Bootstrap components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function updateTextArea(type) {
+        if (type === "encryption") {
+          // Get the input value
+          var inputValue = $('[name="text"]').val();
+
+          // Update the Encrypted Texts Area
+          $("#encryption-texts").html("<li>Encrypted: " + inputValue + "</li>");
+        } else if (type === "decryption") {
+          // Get the input value
+          var inputValue = $('[name="text"]').val();
+
+          // Update the Decrypted Texts Area
+          $("#decryption-texts").html(
+            "<li>Original: " +
+              inputValue +
+              "<br>Decrypted: [Decryption Logic Here]</li>"
+          );
+        }
+      }
+
+      function clearHistory(type) {
+        if (confirm(`Are you sure you want to clear the ${type} history?`)) {
+          $.ajax({
+            type: "POST",
+            url: '{% url "clear_history" %}',
+            data: { clear_history: "true", type: type },
+            beforeSend: function (xhr, settings) {
+              xhr.setRequestHeader(
+                "X-CSRFToken",
+                $("[name=csrfmiddlewaretoken]").val()
+              );
+            },
+            success: function () {
+              location.reload();
+            },
+            error: function (xhr, status, error) {
+              console.error(`Error clearing ${type} history:`, error);
+              alert(
+                `Error clearing ${type} history. Please check the console for details.`
+              );
+            },
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
