@@ -9,7 +9,7 @@
 ![DT-op](https://github.com/OmiTech27/Text-Encryption-and-Decryption/assets/37969779/60ccac45-8cc7-4b4a-a6e8-ac8ecd9ace96)
 
 
-## SEM-3 Project Submission
+## SEM-3 Project
 ### ASM Institute of Management & Computer of Studies
 ### MCA Department
 
@@ -20,6 +20,47 @@ Prof. Reeta Singh., IMCOST
 
 ## Abstract
 This extensive journal thoroughly documents the development of a sophisticated web-based application for text encryption and decryption. Utilizing the Caesar Cipher algorithm as a foundation, the project aims to provide a highly secure and user-friendly method for protecting sensitive information through encryption. The document includes in-depth explanations, technical details, and insights into the cryptographic principles employed.
+
+# How to run this project --->
+# Text Encryption and Decryption Project\n\
+\n\
+## Introduction\n\
+This project implements a web-based application for text encryption and decryption using the Caesar Cipher algorithm. It provides a user-friendly interface for securely encrypting and decrypting sensitive information.\n\
+\n\
+## Installation Guide\n\
+Follow these steps to set up and run the project locally:\n\
+\n\
+### 1. Clone the Repository\n\
+git clone <repository-url>\n\
+\n\
+### 2. Install Python\n\
+Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).\n\
+\n\
+### 3. Install Django\n\
+pip install django\n\
+\n\
+### 4. Navigate to Project Directory\n\
+cd text-encryption-decryption\n\
+\n\
+### 5. Run Migrations\n\
+python manage.py migrate\n\
+\n\
+### 6. Start the Server\n\
+python manage.py runserver\n\
+\n\
+### 7. Access the Application\n\
+Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to access the application.\n\
+\n\
+## Usage\n\
+- Enter the text you want to encrypt in the provided input field.\n\
+- Click on the \"Encrypt\" button to encrypt the text.\n\
+- The encrypted text will be displayed below.\n\
+- To decrypt text, enter the encrypted text along with the decryption key in the provided input fields.\n\
+- Click on the \"Decrypt\" button to decrypt the text.\n\
+- The decrypted text will be displayed below.\n\
+\n\
+
+
 
 ## Contents
 1. Introduction
