@@ -1,4 +1,4 @@
-# Text Encryption and Decryption Project Journal
+# Text Encryption and Decryption Using python Django Project 
 
 ## SEM-3 Project Submission
 ### ASM Institute of Management & Computer of Studies
