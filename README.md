@@ -1,4 +1,13 @@
 # Text Encryption and Decryption Using python Django Project 
+# Home Page ---->
+![Screenshot 2024-01-14 012929](https://github.com/OmiTech27/Text-Encryption-and-Decryption/assets/37969779/6efca125-dea2-4154-95e4-56df6f96cecc)
+
+# Text Encryption ---->
+![en-op](https://github.com/OmiTech27/Text-Encryption-and-Decryption/assets/37969779/a798dfa6-25a0-4c9a-92a6-178964995431)
+
+# Text Decryption ---->
+![DT-op](https://github.com/OmiTech27/Text-Encryption-and-Decryption/assets/37969779/60ccac45-8cc7-4b4a-a6e8-ac8ecd9ace96)
+
 
 ## SEM-3 Project Submission
 ### ASM Institute of Management & Computer of Studies
