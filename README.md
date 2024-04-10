@@ -77,15 +77,6 @@ While the Caesar Cipher is a basic encryption method, it illustrates fundamental
 ### 6.1 System Architecture
 The system follows a client-server architecture. The client interacts with the web application through a user interface, and the server handles the encryption and decryption processes. This section delves into the architectural design, component interactions, and the role of each module in the system.
 
-### 6.2 Django Models (models.py)
-[Insert Django models.py code here]
-
-### 6.3 Django Views (views.py)
-[Insert Django views.py code here]
-
-### 6.4 Django Templates (home.html)
-[Insert Django home.html code here]
-
 ### 6.5 Results
 #### 6.5.1 Encryption Result
 Original Text: Hello
