@@ -27,30 +27,33 @@ This extensive journal thoroughly documents the development of a sophisticated w
 ## Introduction
 This project implements a web-based application for text encryption and decryption using the Caesar Cipher algorithm. It provides a user-friendly interface for securely encrypting and decrypting sensitive information. 
 
-```
-$ npm install --save @github/clipboard-copy-element
-```
 ## Installation Guide
-Follow these steps to set up and run the project locally:\n\
-\n\
+Follow these steps to set up and run the project locally:
+
 ### 1. Clone the Repository
-git clone <repository-url>\n\
-\n\
-### 2. Install Python\n\
-Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).\n\
-\n\
-### 3. Install Django\n\
-pip install django\n\
-\n\
-### 4. Navigate to Project Directory\n\
-cd text-encryption-decryption\n\
-\n\
-### 5. Run Migrations\n\
-python manage.py migrate\n\
-\n\
-### 6. Start the Server\n\
-python manage.py runserver\n\
-\n\
+```
+$ git clone <repository-url>
+```
+### 2. Install Python
+Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
+
+### 3. Install Django
+```
+$pip install django
+```
+### 4. Navigate to Project Directory
+```
+$ cd text-encryption-decryption\n\
+```
+### 5. Run Migrations
+```
+$ python manage.py migrate
+```
+### 6. Start the Server
+```
+$ python manage.py runserver\n\
+```
+
 ### 7. Access the Application\n\
 Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to access the application.\n\
 \n\
