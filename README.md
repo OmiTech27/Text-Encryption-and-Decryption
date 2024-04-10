@@ -32,39 +32,38 @@ Follow these steps to set up and run the project locally:
 
 ### 1. Clone the Repository
 ```
-$ git clone <repository-url>
+git clone <repository-url>
 ```
 ### 2. Install Python
 Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
 
 ### 3. Install Django
 ```
-$pip install django
+pip install django
 ```
 ### 4. Navigate to Project Directory
 ```
-$ cd text-encryption-decryption\n\
+cd text-encryption-decryption
 ```
 ### 5. Run Migrations
 ```
-$ python manage.py migrate
+python manage.py migrate
 ```
 ### 6. Start the Server
 ```
-$ python manage.py runserver\n\
+python manage.py runserver
 ```
 
-### 7. Access the Application\n\
-Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to access the application.\n\
-\n\
-## Usage\n\
-- Enter the text you want to encrypt in the provided input field.\n\
-- Click on the \"Encrypt\" button to encrypt the text.\n\
-- The encrypted text will be displayed below.\n\
-- To decrypt text, enter the encrypted text along with the decryption key in the provided input fields.\n\
-- Click on the \"Decrypt\" button to decrypt the text.\n\
-- The decrypted text will be displayed below.\n\
-\n\
+### 7. Access the Application
+Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to access the application.
+
+## Usage
+- Enter the text you want to encrypt in the provided input field.
+- Click on the \"Encrypt\" button to encrypt the text.
+- The encrypted text will be displayed below.
+- To decrypt text, enter the encrypted text along with the decryption key in the provided input fields.
+- Click on the \"Decrypt\" button to decrypt the text.
+- The decrypted text will be displayed below.
 
 
 
