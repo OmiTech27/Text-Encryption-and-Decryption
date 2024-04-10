@@ -24,13 +24,16 @@ This extensive journal thoroughly documents the development of a sophisticated w
 # How to run this project --->
 # Text Encryption and Decryption Project\n\
 \n\
-## Introduction\n\
-This project implements a web-based application for text encryption and decryption using the Caesar Cipher algorithm. It provides a user-friendly interface for securely encrypting and decrypting sensitive information.\n\
-\n\
-## Installation Guide\n\
+## Introduction
+This project implements a web-based application for text encryption and decryption using the Caesar Cipher algorithm. It provides a user-friendly interface for securely encrypting and decrypting sensitive information. 
+
+```
+$ npm install --save @github/clipboard-copy-element
+```
+## Installation Guide
 Follow these steps to set up and run the project locally:\n\
 \n\
-### 1. Clone the Repository\n\
+### 1. Clone the Repository
 git clone <repository-url>\n\
 \n\
 ### 2. Install Python\n\
