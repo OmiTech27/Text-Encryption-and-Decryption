@@ -22,8 +22,7 @@ Prof. Reeta Singh., IMCOST
 This extensive journal thoroughly documents the development of a sophisticated web-based application for text encryption and decryption. Utilizing the Caesar Cipher algorithm as a foundation, the project aims to provide a highly secure and user-friendly method for protecting sensitive information through encryption. The document includes in-depth explanations, technical details, and insights into the cryptographic principles employed.
 
 # How to run this project --->
-# Text Encryption and Decryption Project\n\
-\n\
+# Text Encryption and Decryption 
 ## Introduction
 This project implements a web-based application for text encryption and decryption using the Caesar Cipher algorithm. It provides a user-friendly interface for securely encrypting and decrypting sensitive information. 
 
@@ -32,7 +31,7 @@ Follow these steps to set up and run the project locally:
 
 ### 1. Clone the Repository
 ```
-git clone <repository-url>
+git clone https://github.com/OmiTech27/Text-Encryption-and-Decryption.git
 ```
 ### 2. Install Python
 Make sure you have Python installed on your system. You can download it from the [official Python website](https://www.python.org/downloads/).
