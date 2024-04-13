@@ -67,9 +67,11 @@ Open your web browser and go to [http://localhost:8000/](http://localhost:8000/)
 
 #### Encryption Result
 Original Text: Hello
+
 Encrypted Text: Khoor
 
 #### Decryption Result
 Encrypted Text: Khoor
+
 Decrypted Text: Hello
 
